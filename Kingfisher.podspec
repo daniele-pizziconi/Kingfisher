@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Kingfisher"
-  s.version      = "6.0.1"
+  s.version      = "6.1.0"
   s.summary      = "A lightweight and pure Swift implemented library for downloading and cacheing image from the web."
 
   s.description  = <<-DESC
@@ -34,8 +34,9 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "3.0"
 
   s.source       = { :git => "https://github.com/onevcat/Kingfisher.git", :tag => s.version }
-  s.source_files  = ["Sources/**/*.swift", "Sources/Kingfisher.h"]
+  s.source_files  = ["Sources/**/*.swift"]
 
   s.requires_arc = true
   s.frameworks = "CFNetwork", "Accelerate"
+  s.weak_frameworks = "SwiftUI", "Combine"
 end
